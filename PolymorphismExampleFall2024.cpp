@@ -2,10 +2,17 @@
 //
 
 #include <iostream>
-
+#include "SavingsAccount.h"
+using namespace std; 
 int main()
 {
-    std::cout << "Hello World!\n";
+	BankAccount *b1 = new BankAccount("Kyle", 5500);
+	SavingsAccount* sa1 = new SavingsAccount("Sarah",49000,6);
+
+	sa1->withdraw(500);
+
+	cout << sa1->getBalance() << endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
