@@ -16,7 +16,7 @@ public:
 	float getBalance();
 
 	void deposit(float a);
-	void withdraw(float a);
+	virtual void withdraw(float a);// Virtual turns on dynamic binding mode
 
 	BankAccount();
 	BankAccount(string cn, float b); 

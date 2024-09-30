@@ -7,11 +7,31 @@ using namespace std;
 int main()
 {
 	BankAccount *b1 = new BankAccount("Kyle", 5500);
-	SavingsAccount* sa1 = new SavingsAccount("Sarah",49000,6);
+	SavingsAccount* sa1 = new SavingsAccount("Sarah",5500,6);
 
-	sa1->withdraw(500);
+	BankAccount *ba2 = new SavingsAccount("Jacob", 5000, 6);
 
-	cout << sa1->getBalance() << endl;
+
+	//sa1->withdraw(500);
+
+	//cout << sa1->getBalance() << endl;
+
+	BankAccount** ar1 = new BankAccount *[2];// Array of pointers
+
+	ar1[0] = b1; 
+	ar1[1] = sa1;
+
+	for (int i = 0; i < 2; i++)
+	{
+		ar1[i]->withdraw(50);
+
+	}
+
+	for (int i = 0; i < 2; i++)
+	{
+		cout<<ar1[i]->getBalance() << endl;
+
+	}
 
 }
 
