@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "SavingsAccount.h"
+#include "HYSAccount.h"
 using namespace std; 
 int main()
 {
@@ -11,23 +12,26 @@ int main()
 
 	BankAccount *ba2 = new SavingsAccount("Jacob", 5000, 6);
 
+	
 
 	//sa1->withdraw(500);
 
 	//cout << sa1->getBalance() << endl;
 
-	BankAccount** ar1 = new BankAccount *[2];// Array of pointers
+	BankAccount** ar1 = new BankAccount *[3];// Array of pointers
 
 	ar1[0] = b1; 
 	ar1[1] = sa1;
+	ar1[2] = new HYSAccount();
+	
 
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		ar1[i]->withdraw(50);
 
 	}
 
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		cout<<ar1[i]->getBalance() << endl;
 
